@@ -3,7 +3,7 @@
 This is the [Bootstrap theme Slate](https://bootswatch.com/3/slate/) converted into
 a theme for Alliance auth.
 
-![AA Theme: Slate](https://raw.githubusercontent.com/ppfeufer/aa-theme-slatep/master/aa_theme_slate/images/aa_theme_slate.jpg)
+![AA Theme: Slate](https://raw.githubusercontent.com/ppfeufer/aa-theme-slate/master/aa_theme_slate/images/aa_theme_slate.jpg)
 
 ## Installation
 
