@@ -18,7 +18,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     license="GPLv3",
-    description='Bootsatrap Theme "Slate" for Alliance Auth',
+    description='Bootstrap Theme "Slate" for Alliance Auth',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ppfeufer/aa-theme-slate",
