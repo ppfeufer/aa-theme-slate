@@ -1,0 +1,151 @@
+/* bootstrap theme overrides
+------------------------------------------------------------------------------------- */
+@media all {
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        background-size: cover;
+        color: rgb(200, 200, 200);
+        font-size: 100%;
+    }
+
+    .page-header {
+        border-bottom: none;
+    }
+
+    .navbar {
+        background-image: none;
+        background-repeat: no-repeat;
+        border: 1px solid rgba(0, 0, 0, 0.6);
+        filter: none;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    .navbar .navbar-nav > li > a:hover {
+        background-image: none;
+        background-repeat: no-repeat;
+        border-left-color: transparent;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        background-image: none;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    .navbar-default {
+        background-color: rgb(58, 63, 68);
+        border-color: rgb(43, 46, 50);
+    }
+
+    .nav-pills > li > a {
+        background-image: none;
+        background-repeat: no-repeat;
+        border: none;
+        color: rgb(255, 255, 255);
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    .nav-pills > li > a:hover {
+        background: rgb(236, 240, 241);
+        background-image: none;
+        border: none;
+        color: rgb(54, 54, 54);
+        filter: none;
+    }
+
+    .nav-pills > li > a.active {
+        background: rgb(62, 68, 76);
+    }
+
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:focus,
+    .nav-pills > li.active > a:hover {
+        background-color: rgb(62, 68, 76);
+        background-image: none;
+        background-repeat: no-repeat;
+        border: none;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    /* in case someone puts the nav into a panel header ...
+    ------------------------------------------------------- */
+    .panel-heading .nav-pills > li > a:hover,
+    .panel-heading .nav-pills > li.active > a,
+    .panel-heading .nav-pills > li.active > a:focus,
+    .panel-heading .nav-pills > li.active > a:hover {
+        background-color: rgba(200, 200, 200, 0.2);
+        background-image: none;
+        background-repeat: no-repeat;
+        border: none;
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    .auth-navbar-top .navbar-brand {
+        padding: 15px 15px 15px 15px;
+    }
+
+    .auth-navbar-top #f-lang-select {
+        margin-top: 9px;
+    }
+
+    .template-light-mode .nav-tabs > li.active > a,
+    .template-dark-mode .nav-tabs > li.active > a {
+        background-color: rgb(62, 68, 76) !important;
+        border: 1px solid rgb(28, 30, 34) !important;
+        border-bottom-color: transparent !important;
+        color: rgb(255, 255, 255) !important;
+        cursor: default;
+    }
+
+    .table > thead > tr > th,
+    .table > tbody > tr > th,
+    .table > tfoot > tr > th,
+    .table > thead > tr > td,
+    .table > tbody > tr > td,
+    .table > tfoot > tr > td {
+        border-top: none;
+    }
+}
+
+/* highlight active menu items
+------------------------------------------------------------------------------------- */
+@media all {
+    .nav-pills > li > a.active,
+    .nav-pills > li > a:hover {
+        background-color: rgb(62, 68, 76);
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* navbar
+------------------------------------------------------------------------------------- */
+@media all and (min-width: 768px) {
+    .navbar-nav > li > a, .auth-navbar-top .navbar-brand {
+        padding-bottom: 19px;
+        padding-top: 19px;
+    }
+
+    .auth-side-navbar {
+        background-color: transparent;
+    }
+
+    .auth-side-navbar .nav-pills > li > a.active,
+    .auth-side-navbar .nav-pills > li > a:hover {
+        background-color: rgb(62, 68, 76);
+    }
+}
