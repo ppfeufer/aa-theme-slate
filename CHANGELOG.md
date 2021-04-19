@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.1.0] - 2021-04-19
+
+### Removed
+
+- CSS for dark and light mode, we don't have that with this theme
+
+
 ## [1.0.1] - 2021-04-18
 
 ### Fixed

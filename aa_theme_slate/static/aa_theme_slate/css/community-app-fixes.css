@@ -43,8 +43,8 @@
 /* App: AA Blueprints
 ------------------------------------------------------------------------------------- */
 @media all {
-    .template-light-mode .aa-blueprints .table-striped > tbody > tr.tr-group,
-    .template-light-mode .aa-blueprints .tr-group {
+    .aa-blueprints .table-striped > tbody > tr.tr-group,
+    .aa-blueprints .tr-group {
         background-color: rgb(62, 68, 76) !important;
         font-weight: bold;
     }
@@ -53,20 +53,12 @@
 /* App :: AA Memberaudit
 ------------------------------------------------------------------------------------- */
 @media all {
-    .template-light-mode .aa-memberaudit .sidebar_character > a,
-    .template-dark-mode .aa-memberaudit .sidebar_character > a {
-        color: rgb(255, 255, 255);
-    }
-
-    .template-light-mode .aa-memberaudit .sidebar_character:hover > a,
-    .template-light-mode .aa-memberaudit .sidebar_character.active > a,
-    .template-dark-mode .aa-memberaudit .sidebar_character:hover > a,
-    .template-dark-mode .aa-memberaudit .sidebar_character.active > a {
+    .aa-memberaudit .sidebar_character:hover > a,
+    .aa-memberaudit .sidebar_character.active > a {
         background-color: rgb(62, 68, 76);
     }
 
-    .template-light-mode .aa-memberaudit .cards_container .card,
-    .template-dark-mode .aa-memberaudit .cards_container .card {
+    .aa-memberaudit .cards_container .card {
         background-color: rgba(100, 100, 100, 0.5);
     }
 
@@ -108,21 +100,5 @@
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
         color: rgb(253, 126, 20);
         text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
-    }
-}
-
-/* App: Corpstat
-------------------------------------------------------------------------------------- */
-@media all {
-    .corpstat-corp-dropdown.dropdown-menu > li > a {
-        padding: 3px 36px 3px 20px;
-    }
-}
-
-/* App: AA Timezones
-------------------------------------------------------------------------------------- */
-@media all {
-    .aa-fleetpings-pingtext {
-        top: 3.6875rem;
     }
 }
