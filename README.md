@@ -11,7 +11,7 @@ a theme for Alliance auth.
 pip install aa-theme-slate
 ```
 
-Now open your `local.py` and add the following right belos your `INSTALLED_APPS`:
+Now open your `local.py` and add the following right below your `INSTALLED_APPS`:
 ```python
 # Slate Thame - https://github.com/ppfeufer/aa-theme-slate
 INSTALLED_APPS.insert(0, "aa_theme_slate")

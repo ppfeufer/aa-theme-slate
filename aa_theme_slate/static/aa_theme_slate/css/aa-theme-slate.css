@@ -103,8 +103,7 @@
         margin-top: 9px;
     }
 
-    .template-light-mode .nav-tabs > li.active > a,
-    .template-dark-mode .nav-tabs > li.active > a {
+    #wrapper .nav-tabs > li.active > a {
         background-color: rgb(62, 68, 76) !important;
         border: 1px solid rgb(28, 30, 34) !important;
         border-bottom-color: transparent !important;

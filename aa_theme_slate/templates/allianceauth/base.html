@@ -24,7 +24,7 @@
         {% block extra_css %}{% endblock extra_css %}
     </head>
 
-    <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
+    <body>
         {% if user.is_authenticated %}
             <div id="wrapper" class="container">
                 <!-- Navigation -->
