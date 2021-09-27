@@ -81,6 +81,10 @@
         filter: none;
     }
 
+    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        min-width: 225px;
+    }
+
     /* in case someone puts the nav into a panel header ...
     ------------------------------------------------------- */
     .panel-heading .nav-pills > li > a:hover,
@@ -135,8 +139,8 @@
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
     .navbar-nav > li > a, .auth-navbar-top .navbar-brand {
-        padding-bottom: 19px;
-        padding-top: 19px;
+        padding-bottom: 20px;
+        padding-top: 20px;
     }
 
     .auth-side-navbar {
