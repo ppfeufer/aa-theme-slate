@@ -1,4 +1,4 @@
-name: Run Automated Checks
+name: Automated Checks
 
 on:
   push:
@@ -6,10 +6,17 @@ on:
       - '**'
 
     tags-ignore:
-      - v*
+      - '**'
+
+  pull_request:
+    branches:
+      - '**'
+
+    tags-ignore:
+      - '**'
 
 jobs:
-  # pre-commit checks
+  # pre-commit Checks
   pre-commit:
     name: Pre Commit Checks
     runs-on: ubuntu-latest
@@ -24,30 +31,15 @@ jobs:
       - name: Run Pre Commit Checks
         uses: pre-commit/action@v2.0.0
 
-  # black formatter
-#  black-format:
-#    needs: pre-commit
-#    name: Black Code Formatter
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
-#
-#      - name: Run Black Formatter Checks
-#        uses: Ahuge/black-action@master
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#          BLACK_ARGS: "."
-
-  # codacy security scan
+  # Codacy Security Scan
   codacy-security-scan:
     needs: [pre-commit]
     name: Codacy Security Scan
     runs-on: ubuntu-latest
+
     steps:
       # Checkout the repository to the GitHub Actions runner
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
 
       # Execute Codacy Analysis CLI and generate a SARIF output with the security issues identified during the analysis
@@ -72,9 +64,82 @@ jobs:
         with:
           sarif_file: results.sarif
 
-  # pypi build test
-  build-test:
+  # Run Test Coverage
+  test-coverage:
     needs: [codacy-security-scan]
+    name: Test Coverage
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python: [ 3.7, 3.8, 3.9 ]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install redis
+        run: sudo apt-get install -y redis-tools redis-server
+
+      - name: Verify that redis is up
+        run: redis-cli ping
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python }}
+
+      - name: Install Tox and any other packages
+        run: pip install tox
+
+      - name: Run Tox
+        # Run tox using the version of Python in `PATH`
+        run: tox -e py
+
+      - name: Upload Coverage Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: coverage
+          path: coverage.xml
+
+  # Coverage upload to Codecov and Codacy
+  upload-coverage:
+    needs: [test-coverage]
+    name: Upload Coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          path: artifacts
+
+      - name: Display structure of downloaded files
+        run: ls -Rrtlh
+        working-directory: artifacts
+
+      - name: Upload Coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          files: artifacts/coverage/coverage.xml # optional
+#          flags: unittests # optional
+#          name: codecov-umbrella # optional
+#          fail_ci_if_error: true # optional (default = false)
+          verbose: true # optional (default = false)
+
+      - name: Upload Coverage to Codacy Coverage Reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: artifacts/coverage/coverage.xml
+
+  # Pypi Build Test
+  pypi-build-test:
+    needs: [test-coverage]
     name: PyPi Build Test
     runs-on: ubuntu-latest
 

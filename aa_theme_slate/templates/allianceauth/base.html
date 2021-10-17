@@ -48,17 +48,19 @@
                 </div>
             </div>
         {% endif %}
-        <!-- share data with JS part -->
-        <div
-            id="dataExport"
-            data-notificationsListViewUrl="{% url 'notifications:list' %}"
-            data-notificationsRefreshTime="{% notifications_refresh_time %}"
-            data-userNotificationsCountViewUrl="{% url 'notifications:user_notifications_count' request.user.pk %}"
-        >
-        </div>
+
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/jquery-visibility-js.html' %}
+
+        <script type="application/javascript">
+            let notificationUPdateSettings = {
+                notificationsListViewUrl: "{% url 'notifications:list' %}",
+                notificationsRefreshTime: "{% notifications_refresh_time %}",
+                userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"
+            };
+        </script>
         <script src="{% static 'js/refresh_notifications.js' %}"></script>
+        <script src="{% static 'js/eve-time.js' %}"></script>
 
         {% block extra_javascript %}
         {% endblock extra_javascript %}

@@ -1,4 +1,8 @@
-default_app_config = "aa_theme_slate.apps.AaThemeConfig"
+"""
+Initialize the app
+"""
 
-__version__ = "1.1.0"
+default_app_config: str = "aa_theme_slate.apps.AaThemeConfig"
+
+__version__ = "1.2.0"
 __title__ = 'Bootstrap Theme "Slate" for Alliance Auth'

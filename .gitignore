@@ -1,5 +1,14 @@
 /build/
 /dist/
 /*.egg-info/
-__pycache__
 .idea/
+.tox/
+htmlcov/
+
+*.log
+*.tmp
+*.bak
+*.old
+__pycache__
+.coverage
+/coverage.xml
