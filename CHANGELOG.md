@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.1] - 2021-10-21
+
+### Changed
+
+- Use SITE_NAME as page title
+
+
 ## [1.2.0] - 2021-10-17
 
 ### Changed

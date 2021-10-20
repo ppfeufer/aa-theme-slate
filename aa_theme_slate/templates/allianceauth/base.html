@@ -12,7 +12,7 @@
         <meta name="author" content="">
         {% include 'allianceauth/icons.html' %}
 
-        <title>{% block title %}{% block page_title %}{% endblock page_title %} - Alliance Auth{% endblock title %}</title>
+        <title>{% block title %}{% block page_title %}{% endblock page_title %} - {{ SITE_NAME }}{% endblock title %}</title>
 
         <link rel="stylesheet" href="{% static 'aa_theme_slate/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
