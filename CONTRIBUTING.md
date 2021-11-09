@@ -9,7 +9,7 @@ This repository uses [pre-commit](https://github.com/pre-commit/pre-commit) to
 verify compliance with formatting rules. To use:
 
 1. Install `pre-commit`.
-2. From inside the `aa-srp` root directory, run `pre-commit install`.
+2. From inside the `aa-theme-slate` root directory, run `pre-commit install`.
 3. You're all done! Code will be checked automatically using git hooks.
 
 You can check if your code to commit adheres to the given style by simply running:
@@ -38,3 +38,19 @@ branch will be considered.
 
 Please make sure you have signed the [License Agreement](https://developers.eveonline.com/resource/license-agreement)
 by logging in at https://developers.eveonline.com before submitting any pull requests.
+
+### Test Coverage
+
+Please make sure your contribution comes with tests covering your additions and
+changes. We aim to provide a test coverage of well above 80% in this project. Pull
+requests lowering the test coverage will not be considered for merging.
+
+You can run tests locally via:
+```shell
+make coverage
+```
+
+The full tox-test suite can be run via:
+```shell
+tox
+```
