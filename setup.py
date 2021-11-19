@@ -22,8 +22,8 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/ppfeufer/aa-theme-slate",
-    author="Rounon Dax",
-    author_email="info@terra-nanotech.de",
+    author="Peter Pfeufer",
+    author_email="development@ppfeufer.de",
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
