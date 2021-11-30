@@ -66,13 +66,13 @@ jobs:
 
   # Run Test Coverage
   test-coverage:
-    needs: [codacy-security-scan]
+    needs: [ codacy-security-scan ]
     name: Test Coverage (Python ${{ matrix.python-version }}, Django ${{ matrix.django-version }})
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        python-version: [ '3.7', '3.8', '3.9' ]
+        python-version: [ '3.7', '3.8', '3.9', '3.10' ]
         django-version: [ '3.2' ]
 
     steps:
@@ -131,7 +131,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: artifacts/coverage-python-3.9-django-3.2/coverage.xml # optional
+          files: artifacts/coverage-python-3.10-django-3.2/coverage.xml # optional
 #          flags: unittests # optional
 #          name: codecov-umbrella # optional
 #          fail_ci_if_error: true # optional (default = false)
@@ -141,7 +141,7 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: artifacts/coverage-python-3.9-django-3.2/coverage.xml
+          coverage-reports: artifacts/coverage-python-3.10-django-3.2/coverage.xml
 
   # Pypi Build Test
   pypi-build-test:
