@@ -1,7 +1,10 @@
+# Standard Library
 import os
 
+# Third Party
 from setuptools import find_packages, setup
 
+# AA Theme Slate
 from aa_theme_slate import __version__
 
 # Read the contents of your README file
