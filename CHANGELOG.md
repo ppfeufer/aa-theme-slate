@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Tests for Python 3.11
+- Test suite for AA 3.x and Django 4
 
 ### Changed
 
