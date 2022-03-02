@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Minimum requirements
   - Alliance Auth v2.9.4
 
+### Removed
+
+- Deprecated settings
+
 
 ## [1.3.0] - 2021-11-30
 
