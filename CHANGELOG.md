@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+- Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
 - Minimum requirements
   - Alliance Auth v2.9.4
 
