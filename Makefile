@@ -28,5 +28,8 @@ coverage:
 
 build_test:
 	rm -rfv dist && \
-	rm -rfv build && \
-	python3 setup.py sdist bdist_wheel
+	python3 -m build
+
+tox_tests:
+	tox && \
+	rm -rf .tox/

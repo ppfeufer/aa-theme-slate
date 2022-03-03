@@ -2,9 +2,11 @@
 App Config
 """
 
+# Django
 from django.apps import AppConfig
 
-from . import __version__
+# AA Theme Slate
+from aa_theme_slate import __version__
 
 
 class AaThemeConfig(AppConfig):

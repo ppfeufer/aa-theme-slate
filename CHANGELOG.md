@@ -6,6 +6,27 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [In Development] - Unreleased
+
+
+## [1.4.0] - 2022-03-02
+
+### Added
+
+- Tests for Python 3.11
+- Test suite for AA 3.x and Django 4
+
+### Changed
+
+- Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
+- Minimum requirements
+  - Alliance Auth v2.11.0
+
+### Removed
+
+- Deprecated settings
+
+
 ## [1.3.0] - 2021-11-30
 
 ### Changed
