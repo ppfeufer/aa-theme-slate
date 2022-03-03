@@ -11,11 +11,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Tests for Python 3.11
+- Test suite for AA 3.x and Django 4
 
 ### Changed
 
+- Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
 - Minimum requirements
-  - Alliance Auth v2.9.4
+  - Alliance Auth v2.11.0
+
+### Removed
+
+- Deprecated settings
 
 
 ## [1.3.0] - 2021-11-30
