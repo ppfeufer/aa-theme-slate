@@ -1,5 +1,7 @@
 # Alliance Auth Theme: Slate
 
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N8CL1BY)
+
 This is the [Bootstrap theme Slate](https://bootswatch.com/3/slate/) converted into
 a theme for Alliance auth.
 
