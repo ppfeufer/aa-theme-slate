@@ -45,7 +45,7 @@
 @media all {
     .aa-blueprints .table-striped > tbody > tr.tr-group,
     .aa-blueprints .tr-group {
-        background-color: rgb(62, 68, 76) !important;
+        background-color: rgb(62 68 76) !important;
         font-weight: bold;
     }
 }
@@ -55,15 +55,15 @@
 @media all {
     .aa-memberaudit .sidebar_character:hover > a,
     .aa-memberaudit .sidebar_character.active > a {
-        background-color: rgb(62, 68, 76);
+        background-color: rgb(62 68 76);
     }
 
     .aa-memberaudit .cards_container .card {
-        background-color: rgba(100, 100, 100, 0.5);
+        background-color: rgb(100 100 100 / 50%);
     }
 
     .aa-memberaudit .cards_container {
-        margin: 0 0 2rem 0;
+        margin: 0 0 2rem;
     }
 }
 
@@ -98,7 +98,7 @@
     }
 
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
-        color: rgb(253, 126, 20);
-        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
+        color: rgb(253 126 20);
+        text-shadow: 1px 1px 1px rgb(255 0 0 / 30%);
     }
 }

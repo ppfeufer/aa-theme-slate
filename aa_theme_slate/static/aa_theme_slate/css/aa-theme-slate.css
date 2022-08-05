@@ -7,7 +7,7 @@
 
     body {
         background-size: cover;
-        color: rgb(200, 200, 200);
+        color: rgb(200 200 200);
         font-size: 100%;
     }
 
@@ -18,9 +18,9 @@
     .navbar {
         background-image: none;
         background-repeat: no-repeat;
-        border: 1px solid rgba(0, 0, 0, 0.6);
+        border: 1px solid rgb(0 0 0 / 60%);
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
     }
 
     .navbar-nav > li > a {
@@ -33,51 +33,47 @@
         background-image: none;
         background-repeat: no-repeat;
         border-left-color: transparent;
-        -webkit-filter: none;
         filter: none;
     }
 
     .navbar-inverse .navbar-nav > li > a:hover {
         background-image: none;
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
     .navbar-default {
-        background-color: rgb(58, 63, 68);
-        border-color: rgb(43, 46, 50);
+        background-color: rgb(58 63 68);
+        border-color: rgb(43 46 50);
     }
 
     .nav-pills > li > a {
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        color: rgb(255, 255, 255);
-        -webkit-filter: none;
+        color: rgb(255 255 255);
         filter: none;
     }
 
     .nav-pills > li > a:hover {
-        background: rgb(236, 240, 241);
+        background: rgb(236 240 241);
         background-image: none;
         border: none;
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
         filter: none;
     }
 
     .nav-pills > li > a.active {
-        background: rgb(62, 68, 76);
+        background: rgb(62 68 76);
     }
 
     .nav-pills > li.active > a,
     .nav-pills > li.active > a:focus,
     .nav-pills > li.active > a:hover {
-        background-color: rgb(62, 68, 76);
+        background-color: rgb(62 68 76);
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -91,16 +87,15 @@
     .panel-heading .nav-pills > li.active > a,
     .panel-heading .nav-pills > li.active > a:focus,
     .panel-heading .nav-pills > li.active > a:hover {
-        background-color: rgba(200, 200, 200, 0.2);
+        background-color: rgb(200 200 200 / 20%);
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        -webkit-filter: none;
         filter: none;
     }
 
     .auth-navbar-top .navbar-brand {
-        padding: 15px 15px 15px 15px;
+        padding: 15px;
     }
 
     .auth-navbar-top #f-lang-select {
@@ -108,10 +103,10 @@
     }
 
     #wrapper .nav-tabs > li.active > a {
-        background-color: rgb(62, 68, 76) !important;
-        border: 1px solid rgb(28, 30, 34) !important;
+        background-color: rgb(62 68 76) !important;
+        border: 1px solid rgb(28 30 34) !important;
         border-bottom-color: transparent !important;
-        color: rgb(255, 255, 255) !important;
+        color: rgb(255 255 255) !important;
         cursor: default;
     }
 
@@ -130,15 +125,16 @@
 @media all {
     .nav-pills > li > a.active,
     .nav-pills > li > a:hover {
-        background-color: rgb(62, 68, 76);
-        color: rgb(255, 255, 255);
+        background-color: rgb(62 68 76);
+        color: rgb(255 255 255);
     }
 }
 
 /* navbar
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
-    .navbar-nav > li > a, .auth-navbar-top .navbar-brand {
+    .navbar-nav > li > a,
+    .auth-navbar-top .navbar-brand {
         padding-bottom: 20px;
         padding-top: 20px;
     }
@@ -149,6 +145,6 @@
 
     .auth-side-navbar .nav-pills > li > a.active,
     .auth-side-navbar .nav-pills > li > a:hover {
-        background-color: rgb(62, 68, 76);
+        background-color: rgb(62 68 76);
     }
 }
