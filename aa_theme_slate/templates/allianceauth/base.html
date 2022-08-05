@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="{% static 'aa_theme_slate/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link href="{% static 'css/auth-base.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'allianceauth/css/auth-base.css' %}" type="text/css" rel="stylesheet">
         <link href="{% static 'aa_theme_slate/css/aa-theme-slate.min.css' %}" type="text/css" rel="stylesheet">
         <link href="{% static 'aa_theme_slate/css/community-app-fixes.min.css' %}" type="text/css" rel="stylesheet">
 
@@ -59,8 +59,8 @@
                 userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"
             };
         </script>
-        <script src="{% static 'js/refresh_notifications.js' %}"></script>
-        <script src="{% static 'js/eve-time.js' %}"></script>
+        <script src="{% static 'allianceauth/js/refresh_notifications.js' %}"></script>
+        <script src="{% static 'allianceauth/js/eve-time.js' %}"></script>
 
         {% block extra_javascript %}
         {% endblock extra_javascript %}
