@@ -9,6 +9,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [1.6.0] - 2022-08-05
+
+### Added
+
+- SVG icons for `aa-forum` v1.12.0
+
+### Changed
+
+- Minimum requirements
+  - Alliance Auth >= 2.15.1
+  - Python >= 3.8
+
+
 ## [1.5.0] - 2022-08-05
 
 ### Changed
@@ -27,7 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
 - Minimum requirements
-  - Alliance Auth v2.11.0
+  - Alliance Auth >= 2.11.0
 
 ### Removed
 
@@ -39,8 +52,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Minimum requirements
-  - Python 3.7
-  - Alliance Auth v2.9.3
+  - Python >= 3.7
+  - Alliance Auth >= 2.9.3
 
 
 ## [1.2.3] - 2021-11-20
