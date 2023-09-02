@@ -75,7 +75,6 @@ repos:
         exclude: |
           (?x)(
             .min(.css|.css.map)|
-            .bootstrap(.*).css|
             static/(.*)/libs/
           )
         args:

@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Moved the build process to PEP 621 / pyproject.toml
+- Base template for AA 3.6.1 public views
 - Minimum requirements
   - Alliance Auth >= 3.6.1
 

@@ -14,56 +14,54 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} - {{ SITE_NAME }}{% endblock title %}</title>
 
-        <link rel="stylesheet" href="{% static 'aa_theme_slate/css/bootstrap.min.css' %}" type="text/css">
+        <link href="{% static 'aa_theme_slate/libs/bootswatch/v3.4.1/slate/bootstrap.min.css' %}" rel="stylesheet">
         {% include 'bundles/fontawesome.html' %}
 
-        <link href="{% static 'allianceauth/css/auth-base.css' %}" type="text/css" rel="stylesheet">
-        <link href="{% static 'aa_theme_slate/css/aa-theme-slate.min.css' %}" type="text/css" rel="stylesheet">
-        <link href="{% static 'aa_theme_slate/css/community-app-fixes.min.css' %}" type="text/css" rel="stylesheet">
+        <link href="{% static 'allianceauth/css/auth-base.css' %}" rel="stylesheet">
+        <link href="{% static 'aa_theme_slate/css/aa-theme-slate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'aa_theme_slate/css/community-app-fixes.min.css' %}" rel="stylesheet">
 
         {% block extra_css %}{% endblock extra_css %}
     </head>
 
     <body>
-        {% if user.is_authenticated %}
-            <div id="wrapper" class="container">
-                <!-- Navigation -->
-                {% include 'allianceauth/top-menu.html' %}
-                <div class="row" id="site-body-wrapper">
+        <div id="wrapper" class="container">
+            <!-- Navigation -->
+            {% include 'allianceauth/top-menu.html' %}
+
+            <div class="clearfix{% if user.is_authenticated %} row{% endif %}" id="site-body-wrapper">
+                {% if user.is_authenticated %}
                     {% include 'allianceauth/side-menu.html' %}
-                    <div class="col-sm-10">
-                        {% if messages %}
-                            <br>
-                            {% for message in messages %}
-                                <div class="alert alert-{{ message.level_tag }}">{{ message }}</div>
-                                {% if not forloop.last %}
-                                    <br>
-                                {% endif %}
-                            {% endfor %}
-                        {% endif %}
-                        {% block content %}
-                        {% endblock content %}
-                    </div>
-                    <div class="clearfix"></div>
+                {% endif %}
+
+                <div class="{% if user.is_authenticated %}col-sm-10{% else %}col-sm-12{% endif %}">
+                    {% include 'allianceauth/messages.html' %}
+
+                    {% block content %}
+                    {% endblock content %}
                 </div>
             </div>
-        {% endif %}
+        </div>
 
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/jquery-visibility-js.html' %}
 
-        <script type="application/javascript">
-            let notificationUPdateSettings = {
-                notificationsListViewUrl: "{% url 'notifications:list' %}",
-                notificationsRefreshTime: "{% notifications_refresh_time %}",
-                userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"
-            };
-        </script>
-        <script src="{% static 'allianceauth/js/refresh_notifications.js' %}"></script>
-        <script src="{% static 'allianceauth/js/eve-time.js' %}"></script>
+        {% if user.is_authenticated %}
+            <script>
+                let notificationUPdateSettings = {
+                    notificationsListViewUrl: "{% url 'notifications:list' %}",
+                    notificationsRefreshTime: "{% notifications_refresh_time %}",
+                    userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"
+                };
+            </script>
+            {% include 'bundles/refresh-notifications-js.html' %}
+        {% endif %}
+
+        {% include 'bundles/evetime-js.html' %}
 
         {% block extra_javascript %}
         {% endblock extra_javascript %}
+
         <script>
             {% block extra_script %}
             {% endblock extra_script %}
