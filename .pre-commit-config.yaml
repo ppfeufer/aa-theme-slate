@@ -3,85 +3,189 @@
 # Update this file:
 #   pre-commit autoupdate
 
+default_language_version:
+  # force all unspecified python hooks to run python3
+  python: python3
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.3.0
+    rev: v4.4.0
     hooks:
-      - id: check-case-conflict
-      - id: check-json
-      - id: check-xml
+      # Identify invalid files
+      - id: check-ast
       - id: check-yaml
-      - id: fix-byte-order-marker
-      - id: trailing-whitespace
-        exclude: \.(min\.css|min\.js|po|mo)$
-      - id: end-of-file-fixer
-        exclude: \.(min\.css|min\.js|po|mo)$
-      - id: mixed-line-ending
-        args: [ --fix=lf ]
-      - id: fix-encoding-pragma
-        args: [ --remove ]
-      - id: detect-private-key
-      - id: check-added-large-files
-        args: [ --maxkb=1000 ]
-      - id: check-ast  # Is it valid Python?
-      - id: debug-statements  # Check for debugger imports and py37+ breakpoint() calls
-      - id: check-merge-conflict
+      - id: check-json
+      - id: check-toml
+      - id: check-xml
 
-  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.4.0
+      # git checks
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args:
+          - --maxkb=1000
+      - id: detect-private-key
+      - id: check-case-conflict
+
+      # Python checks
+      - id: check-docstring-first
+      - id: debug-statements
+      - id: requirements-txt-fixer
+      - id: fix-encoding-pragma
+        args:
+          - --remove
+      - id: fix-byte-order-marker
+      - id: check-builtin-literals
+
+      # General quality checks
+      - id: mixed-line-ending
+        args:
+          - --fix=lf
+      - id: trailing-whitespace
+        args:
+          - --markdown-linebreak-ext=md
+        exclude: |
+          (?x)(
+            .min(.css|.css.map|.js|.js.map)|
+            locale/|
+            static/(.*)/libs/
+          )
+      - id: check-executables-have-shebangs
+      - id: end-of-file-fixer
+        exclude: |
+          (?x)(
+            .min(.css|.css.map|.js|.js.map)|
+            locale/|
+            static/(.*)/libs/
+          )
+
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.48.0
     hooks:
-      - id: editorconfig-checker
-        exclude: ^(LICENSE)
+      - id: eslint
+        exclude: |
+          (?x)(
+            .min(.js|.js.map)|
+            static/(.*)/libs/
+          )
+
+  - repo: https://github.com/awebdeveloper/pre-commit-stylelint
+    rev: 0.0.2
+    hooks:
+      - id: stylelint
+        exclude: |
+          (?x)(
+            .min(.css|.css.map)|
+            static/(.*)/libs/
+          )
+        args:
+          - --formatter=compact
+        additional_dependencies:
+          - stylelint@15.10.3  # https://github.com/stylelint/stylelint/releases/latest
+          - stylelint-config-standard@34.0.0  # https://github.com/stylelint/stylelint-config-standard/releases/latest
 
   - repo: https://github.com/pre-commit/pygrep-hooks
-    rev: v1.9.0
+    rev: v1.10.0
     hooks:
-      - id: python-check-mock-methods
-      - id: python-no-log-warn
-      - id: python-use-type-annotations
-      - id: text-unicode-replacement-char
+      - id: python-check-blanket-noqa  # Enforce that noqa annotations always occur with specific codes. Sample annotations: # noqa: F401, # noqa: F401,W203
+      - id: python-check-blanket-type-ignore  # Enforce that # type: ignore annotations always occur with specific codes. Sample annotations: # type: ignore[attr-defined], # type: ignore[attr-defined, name-defined]
+      - id: python-check-mock-methods  # Prevent common mistakes of assert mck.not_called(), assert mck.called_once_with(...) and mck.assert_called
+      - id: python-no-eval  # A quick check for the eval() built-in function
+      - id: python-no-log-warn  #  A quick check for the deprecated .warn() method of python loggers
+      - id: python-use-type-annotations  # Enforce that python3.6+ type annotations are used instead of type comments
+
+  - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
+    rev: 2.7.2
+    hooks:
+      - id: editorconfig-checker
+        exclude: |
+          (?x)(
+            LICENSE|
+            .min(.css|.css.map|.js|.js.map)|
+            static/(.*)/libs/
+          )
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.7.0
+    rev: 1.14.1
     hooks:
       - id: django-upgrade
-        args: [ --target-version=3.2 ]
+        args:
+          - --target-version=4.0
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.37.0
+    rev: v3.10.1
     hooks:
       - id: pyupgrade
-        args: [ --py37-plus ]
+        args:
+          - --py38-plus
 
-  - repo: https://gitlab.com/pycqa/flake8
-    rev: 3.9.2
+  - repo: https://github.com/pycqa/flake8
+    rev: 6.1.0
     hooks:
       - id: flake8
 
   - repo: https://github.com/asottile/yesqa
-    rev: v1.3.0
+    rev: v1.5.0
     hooks:
       - id: yesqa
 
-  - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.10.1
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.12.0
     hooks:
       - id: isort
 
+  - repo: https://github.com/Pierre-Sassoulas/black-disable-checker/
+    rev: v1.1.3
+    hooks:
+      - id: black-disable-checker
+
   - repo: https://github.com/psf/black
-    rev: 22.6.0
+    rev: 23.7.0
     hooks:
       - id: black
-        args: [ --target-version=py37 ]
+        args:
+          - --target-version=py38
 
   - repo: https://github.com/asottile/blacken-docs
-    rev: v1.12.1
+    rev: 1.16.0
     hooks:
       - id: blacken-docs
-        additional_dependencies: [ black==22.6.0 ]
-        args: [ --target-version=py37 ]
+        additional_dependencies:
+          - black==23.7.0  # https://github.com/psf/black/releases/latest
+        args:
+          - --target-version=py38
 
-  - repo: https://github.com/asottile/setup-cfg-fmt
-    rev: v1.20.1
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17
     hooks:
-      - id: setup-cfg-fmt
+      - id: mdformat
+        additional_dependencies:
+          - mdformat-gfm==0.3.5  # Mdformat plugin for GitHub Flavored Markdown compatibility » https://github.com/hukkin/mdformat-gfm/tags
+          - mdformat-toc==0.3.0  # Mdformat plugin to generate a table of contents » https://github.com/hukkin/mdformat-toc/tags
+          - mdformat-black==0.1.1  # Mdformat plugin to Blacken Python code blocks » https://github.com/hukkin/mdformat-black/tags
+          - mdformat-shfmt==0.1.0  # Mdformat plugin to format shell code blocks » https://github.com/hukkin/mdformat-shfmt/tags
+
+  - repo: https://github.com/tox-dev/tox-ini-fmt
+    rev: 1.3.1
+    hooks:
+      - id: tox-ini-fmt
+
+  - repo: https://github.com/tox-dev/pyproject-fmt
+    rev: 1.1.0
+    hooks:
+      - id: pyproject-fmt
+        args:
+          - --indent=4
+        additional_dependencies:
+          - tox>=4.10  # https://github.com/tox-dev/tox/releases/latest
+
+  - repo: https://github.com/abravalheri/validate-pyproject
+    rev: v0.14
+    hooks:
+      - id: validate-pyproject
+
+  - repo: https://github.com/pylint-dev/pylint
+    rev: v3.0.0a7
+    hooks:
+      - id: pylint
+        args:
+          - --py-version=3.8.0

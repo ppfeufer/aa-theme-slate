@@ -1,6 +1,53 @@
 [build-system]
+build-backend = "hatchling.build"
 requires = [
-    "setuptools>=42",
-    "wheel"
+    "hatchling",
 ]
-build-backend = "setuptools.build_meta"
+
+[project]
+name = "aa-theme-slate"
+version = "1.7.0"
+description = "Bootstrap Theme 'Slate' for Alliance Auth"
+readme = "README.md"
+keywords = [
+    "allianceauth",
+    "eveonline",
+    "template",
+    "theme",
+]
+license = {file = "LICENSE"}
+authors = [
+    { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
+]
+requires-python = "~=3.8"
+classifiers = [
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 4.0",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+]
+dependencies = [
+    "allianceauth>=3.6.1",
+]
+[project.urls]
+Changelog = "https://github.com/ppfeufer/aa-theme-slate/blob/master/CHANGELOG.md"
+Documentation = "https://github.com/ppfeufer/aa-theme-slate/blob/master/README.md"
+Donations = "https://ko-fi.com/ppfeufer"
+Homepage = "https://github.com/ppfeufer/aa-theme-slate"
+Source = "https://github.com/ppfeufer/aa-theme-slate.git"
+Tracker = "https://github.com/ppfeufer/aa-theme-slate/issues"
+
+[tool.hatch.build]
+include = [
+    "/aa_theme_slate",
+]
