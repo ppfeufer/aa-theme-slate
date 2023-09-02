@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Changed
+
+- Moved the build process to PEP 621 / pyproject.toml
+- Minimum requirements
+  - Alliance Auth >= 3.6.1
+
 ## \[1.6.0\] - 2022-08-05
 
 ### Added
