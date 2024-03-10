@@ -6,7 +6,6 @@ requires = [
 
 [project]
 name = "aa-theme-slate"
-version = "1.7.1"
 description = "Bootstrap Theme 'Slate' for Alliance Auth"
 readme = "README.md"
 keywords = [
@@ -36,6 +35,9 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
+dynamic = [
+    "version",
+]
 dependencies = [
     "allianceauth>=3.6.1",
 ]
@@ -56,3 +58,6 @@ Tracker = "https://github.com/ppfeufer/aa-theme-slate/issues"
 include = [
     "/aa_theme_slate",
 ]
+
+[tool.hatch.version]
+path = "aa_theme_slate/__init__.py"
