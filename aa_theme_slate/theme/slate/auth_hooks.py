@@ -1,5 +1,5 @@
 """
-Auth hooks for Terra Nanotech theme
+Auth hooks for Slate Bootstrap Theme for Alliance Auth
 """
 
 # Standard Library
@@ -15,8 +15,8 @@ from allianceauth.theme.hooks import ThemeHook
 
 class AaSlateThemeHook(ThemeHook):
     """
-    Terra Nanotech Corp Auth Theme
-    https://github.com/terra-nanotech/tn-nt-auth-templates/
+    Slate Bootstrap Theme for Alliance Auth
+    https://github.com/ppfeufer/aa-theme-slate
     """
 
     def __init__(self):
@@ -27,7 +27,7 @@ class AaSlateThemeHook(ThemeHook):
         ThemeHook.__init__(
             self,
             "Slate",
-            "Bootstrap Slate Theme",
+            "Slate Bootstrap Theme for Alliance Auth",
             css=[
                 {
                     "url": urljoin(
@@ -60,7 +60,7 @@ class AaSlateThemeHook(ThemeHook):
 @hooks.register("theme_hook")
 def register_aa_slate_hook():
     """
-    Registers the Terra Nanotech theme hook
+    Registers the Slate Bootstrap Theme for Alliance Auth hook
 
     :return:
     :rtype:
