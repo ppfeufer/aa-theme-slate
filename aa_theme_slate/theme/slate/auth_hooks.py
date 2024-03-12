@@ -32,9 +32,9 @@ class AaSlateThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.2/css/bootstrap.min.css",
+                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.3/css/bootstrap.min.css",
                     ),
-                    "integrity": "sha512-1y2MKGMn41OgOgazBAujc8GPUCUDUoS4+3nPlH7mLDmgzIpcLsrAj0m/01xhpGbqbSWiqrnNUxkM/RhugT7ZIA==",
+                    "integrity": "sha512-lF+xS8uroqRohnQyVXSTrsB+YgYcwHKVm8T6atFzc/cnOW1RTnc6x00585jS74sz9GPrNbzH4QkP8JICSXNP0Q==",
                 },
             ],
             js=[
@@ -48,9 +48,9 @@ class AaSlateThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.2/javascript/bootstrap.min.js",
+                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.3/javascript/bootstrap.min.js",
                     ),
-                    "integrity": "sha512-BPNIL/15RLxikcVNXWuFX/0zOtsuNphZCXgIL9im3QZ8ZB3oyGgbokg2pC757WCbpDRLxFnf89pdm6KHO8fehA==",
+                    "integrity": "sha512-gNyiMtmOs5iIO2fjMFZRSR1s9Espoi+fdDtNuSh1iMpeRminsho2AA7767qpfkYqskd9PtUfMwAg0KdKJsMTuQ==",
                 },
             ],
             header_padding="3.6em",

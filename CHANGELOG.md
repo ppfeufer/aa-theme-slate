@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Updated to Bootstrap 5.3.3
+
 ## \[2.0.0-beta.1\] - 2024-03-10
 
 > \[!NOTE\]
