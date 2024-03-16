@@ -35,9 +35,60 @@ Section Order:
 ### Security
 -->
 
-### Changed
+## \[2.0.0\] - 2024-03-16
 
-- Updated to Bootstrap 5.3.3
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0!**
+>
+> Please make sure to update your Alliance Auth instance **before**
+> you install this version, otherwise, an update to Alliance Auth will
+> be pulled in unsupervised.
+
+> \[!IMPORTANT\]
+>
+> Configuration change!
+>
+> See the [Update Information](#update-information-for-aav4) section for the new configuration
+
+### Added
+
+- Compatibility with Alliance Auth 4.0.0
+
+### Removed
+
+- Compatibility with Alliance Auth 3
+
+### Update Information for AAv4
+
+The configuration for the theme has changed. You need to update your `local.py`:
+
+```python
+# Slate Theme - https://github.com/ppfeufer/aa-theme-slate
+INSTALLED_APPS.insert(0, "aa_theme_slate")
+
+if "aa_theme_slate" in INSTALLED_APPS:
+    # Remove all other themes
+    # If you want to use Slate as the only theme, you need to remove all other themes.
+    # INSTALLED_APPS.remove("allianceauth.theme.darkly")
+    # INSTALLED_APPS.remove("allianceauth.theme.flatly")
+    # INSTALLED_APPS.remove("allianceauth.theme.materia")
+
+    # If you are using AA-GDPR, you need to remove the Darkly, Flatly and Materia themes
+    # added by AA-GDPR as well.
+    # if "aagdpr" in INSTALLED_APPS:
+    #     INSTALLED_APPS.remove("aagdpr.theme.darkly")
+    #     INSTALLED_APPS.remove("aagdpr.theme.flatly")
+    #     INSTALLED_APPS.remove("aagdpr.theme.materia")
+
+    INSTALLED_APPS += [
+        "aa_theme_slate.theme.slate",
+    ]
+
+    # Set Slate Bootstrap Theme for Alliance Auth as the default theme (optional)
+    DEFAULT_THEME = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"
+    DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
+```
 
 ## \[2.0.0-beta.1\] - 2024-03-10
 
@@ -89,12 +140,16 @@ if "aa_theme_slate" in INSTALLED_APPS:
         "aa_theme_slate.theme.slate",
     ]
 
-    # Load Slate Bootstrap Theme for Alliance Auth
+    # Set Slate Bootstrap Theme for Alliance Auth as the default theme (optional)
     DEFAULT_THEME = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"
     DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
 ```
 
 ## \[1.7.1\] - 2023-09-18
+
+> \[!NOTE\]
+>
+> **This is the last version compatible with Alliance Auth v3.**
 
 ### Fixed
 

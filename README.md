@@ -70,7 +70,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
         "aa_theme_slate.theme.slate",
     ]
 
-    # Load Slate Bootstrap Theme for Alliance Auth
+    # Set Slate Bootstrap Theme for Alliance Auth as the default theme (optional)
     DEFAULT_THEME = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"
     DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
 ```
