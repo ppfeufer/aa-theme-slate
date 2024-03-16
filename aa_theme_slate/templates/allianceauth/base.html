@@ -14,12 +14,13 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} - {{ SITE_NAME }}{% endblock title %}</title>
 
-        <link href="{% static 'aa_theme_slate/libs/bootswatch/v3.4.1/slate/bootstrap.min.css' %}" rel="stylesheet">
-        {% include 'bundles/fontawesome.html' %}
+        <link href="{% static 'aa_theme_slate/theme/aav3/libs/bootswatch/v3.4.1/slate/bootstrap.min.css' %}" rel="stylesheet">
 
-        <link href="{% static 'allianceauth/css/auth-base.css' %}" rel="stylesheet">
-        <link href="{% static 'aa_theme_slate/css/aa-theme-slate.min.css' %}" rel="stylesheet">
-        <link href="{% static 'aa_theme_slate/css/community-app-fixes.min.css' %}" rel="stylesheet">
+        {% include 'bundles/fontawesome.html' %}
+        {% include 'bundles/auth-base-css.html' %}
+
+        <link href="{% static 'aa_theme_slate/theme/aav3/css/aa-theme-slate.min.css' %}" rel="stylesheet">
+        <link href="{% static 'aa_theme_slate/theme/aav3/css/community-app-fixes.min.css' %}" rel="stylesheet">
 
         {% block extra_css %}{% endblock extra_css %}
     </head>

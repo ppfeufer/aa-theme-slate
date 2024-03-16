@@ -14,7 +14,10 @@ PACKAGE = "aa_theme_slate"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-STATICFILES_DIRS = [os.path.join(PROJECT_DIR, f"{PACKAGE}/static")]
+# STATICFILES_DIRS = [os.path.join(PROJECT_DIR, f"{PACKAGE}/static")]
+STATICFILES_DIRS = [
+    f"{PACKAGE}/static",
+]
 
 SITE_URL = "https://example.com"
 CSRF_TRUSTED_ORIGINS = [SITE_URL]
@@ -112,3 +115,24 @@ DEFAULT_FROM_EMAIL = ""
 #######################################
 # Add any custom settings below here. #
 #######################################
+if "aa_theme_slate" in INSTALLED_APPS:
+    # Remove all other themes
+    # If you want to use Slate as the only theme, you need to remove all other themes.
+    # INSTALLED_APPS.remove("allianceauth.theme.darkly")
+    # INSTALLED_APPS.remove("allianceauth.theme.flatly")
+    # INSTALLED_APPS.remove("allianceauth.theme.materia")
+
+    # If you are using AA-GDPR, you need to remove the Darkly, Flatly and Materia themes
+    # added by AA-GDPR as well.
+    # if "aagdpr" in INSTALLED_APPS:
+    #     INSTALLED_APPS.remove("aagdpr.theme.darkly")
+    #     INSTALLED_APPS.remove("aagdpr.theme.flatly")
+    #     INSTALLED_APPS.remove("aagdpr.theme.materia")
+
+    INSTALLED_APPS += [
+        "aa_theme_slate.theme.slate",
+    ]
+
+    # Load Slate Bootstrap Theme for Alliance Auth
+    DEFAULT_THEME = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"
+    DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
