@@ -125,7 +125,7 @@ repos:
         description: "Ensure that files end with a newline."
 
   - repo: https://github.com/eslint/eslint
-    rev: v8.57.0
+    rev: v9.0.0-rc.0
     hooks:
       - id: eslint
         name: ESLint
@@ -136,7 +136,7 @@ repos:
 #          - globals@13.24.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.2.1
+    rev: v16.3.1
     hooks:
       - id: stylelint
         name: Stylelint
@@ -183,7 +183,7 @@ repos:
         description: "Check for compliance with the definitions in the EditorConfig file."
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.15.0
+    rev: 1.16.0
     hooks:
       - id: django-upgrade
         name: Django upgrade
@@ -192,7 +192,7 @@ repos:
           - --target-version=4.2  # Minimum supported Django version for AA. Update as needed.
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.15.0
+    rev: v3.15.2
     hooks:
       - id: pyupgrade
         name: PyUpgrade
@@ -229,7 +229,7 @@ repos:
         description: "Check for black disable comments."
 
   - repo: https://github.com/psf/black
-    rev: 24.1.1
+    rev: 24.3.0
     hooks:
       - id: black
         name: Black
@@ -290,7 +290,7 @@ repos:
         description: "Validate the pyproject.toml file."
 
   - repo: https://github.com/pylint-dev/pylint
-    rev: v3.0.3
+    rev: v3.1.0
     hooks:
       - id: pylint
         name: Pylint
