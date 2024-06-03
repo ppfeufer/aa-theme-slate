@@ -14,7 +14,7 @@ keywords = [
     "template",
     "theme",
 ]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 authors = [
     { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
 ]
@@ -40,20 +40,18 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=4",
+    "allianceauth<5,>=4",
 ]
-[project.optional-dependencies]
-tests-allianceauth-latest = [
+optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "django-webtest",
 ]
-[project.urls]
-Changelog = "https://github.com/ppfeufer/aa-theme-slate/blob/master/CHANGELOG.md"
-Documentation = "https://github.com/ppfeufer/aa-theme-slate/blob/master/README.md"
-Donations = "https://ko-fi.com/ppfeufer"
-Homepage = "https://github.com/ppfeufer/aa-theme-slate"
-Source = "https://github.com/ppfeufer/aa-theme-slate.git"
-Tracker = "https://github.com/ppfeufer/aa-theme-slate/issues"
+urls.Changelog = "https://github.com/ppfeufer/aa-theme-slate/blob/master/CHANGELOG.md"
+urls.Documentation = "https://github.com/ppfeufer/aa-theme-slate/blob/master/README.md"
+urls.Donations = "https://ko-fi.com/ppfeufer"
+urls.Homepage = "https://github.com/ppfeufer/aa-theme-slate"
+urls.Source = "https://github.com/ppfeufer/aa-theme-slate.git"
+urls.Tracker = "https://github.com/ppfeufer/aa-theme-slate/issues"
 
 [tool.hatch.build]
 include = [
