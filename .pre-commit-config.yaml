@@ -26,9 +26,7 @@ exclude: |
   (?x)(
     LICENSE|  # License
     .min(.css|.css.map|.js|.js.map)|  # Minified CSS and JS files
-    static/(.*)/libs/|  # External libraries
-    aav4/bootstrap/|  # Bootstrap
-    aav4/popper/  # Popper
+    static/(.*)/libs/  # External libraries
   )
 
 # pre-commit setup
