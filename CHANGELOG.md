@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Support for Python 3.8 and Python 3.9
+
 ## \[2.0.0\] - 2024-03-16
 
 > \[!NOTE\]
