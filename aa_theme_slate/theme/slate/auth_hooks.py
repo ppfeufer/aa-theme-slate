@@ -32,7 +32,7 @@ class AaSlateThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.3/css/bootstrap.min.css",
+                        "aa_theme_slate/theme/aav4/libs/bootswatch/v5.3.3/slate/css/bootstrap.min.css",
                     ),
                     "integrity": "sha512-lF+xS8uroqRohnQyVXSTrsB+YgYcwHKVm8T6atFzc/cnOW1RTnc6x00585jS74sz9GPrNbzH4QkP8JICSXNP0Q==",
                 },
@@ -41,14 +41,14 @@ class AaSlateThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "aa_theme_slate/theme/aav4/popper/v2.11.8/popper.min.js",
+                        "aa_theme_slate/theme/aav4/libs/popper/v2.11.8/popper.min.js",
                     ),
                     "integrity": "sha512-fhcY1KxngNJ4jVhZBdmrLv4/NH31jrNM45fpxytokYp06cd7Ug05E3gximUQmukhES9Xf0kbV5F1nHVqWq2bvQ==",
                 },
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "aa_theme_slate/theme/aav4/bootstrap/v5.3.3/javascript/bootstrap.min.js",
+                        "aa_theme_slate/theme/aav4/libs/bootswatch/v5.3.3/slate/javascript/bootstrap.min.js",
                     ),
                     "integrity": "sha512-gNyiMtmOs5iIO2fjMFZRSR1s9Espoi+fdDtNuSh1iMpeRminsho2AA7767qpfkYqskd9PtUfMwAg0KdKJsMTuQ==",
                 },

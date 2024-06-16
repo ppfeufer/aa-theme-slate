@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Moved third party libs into their own directory
+
 ### Removed
 
 - Support for Python 3.8 and Python 3.9
