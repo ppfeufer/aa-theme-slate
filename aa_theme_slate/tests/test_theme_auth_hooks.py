@@ -49,7 +49,7 @@ class SlateThemeHookTests(TestCase):
         :rtype:
         """
 
-        self.assertEqual(first=len(self.theme_hook.css), second=1)
+        self.assertEqual(first=len(self.theme_hook.css), second=2)
         self.assertEqual(first=len(self.theme_hook.js), second=2)
 
     def test_should_have_correct_header_padding(self):
