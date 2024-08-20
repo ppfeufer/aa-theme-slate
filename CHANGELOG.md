@@ -38,6 +38,7 @@ Section Order:
 ### Changed
 
 - Moved third party libs into their own directory
+- Use new CSS styling for the forum SVG icons
 
 ### Removed
 
