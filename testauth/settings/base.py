@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "django_celery_beat",
+    "solo",
     "bootstrapform",
     "django_bootstrap5",  # https://github.com/zostera/django-bootstrap5
     "sortedm2m",
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     "allianceauth.theme.darkly",
     "allianceauth.theme.flatly",
     "allianceauth.theme.materia",
+    "allianceauth.custom_css",
 ]
 
 SECRET_KEY = "wow I'm a really bad default secret key"
@@ -103,6 +105,7 @@ LANGUAGES = (
     ("ja", "Japanese"),
     ("it", "Italian"),
     ("uk", "Ukrainian"),
+    ("pl", "Polish"),
 )
 
 TEMPLATES = [
@@ -194,7 +197,6 @@ DATABASES = {
 }
 
 SITE_NAME = "Alliance Auth"
-SITE_LOGO = f"{STATIC_URL}allianceauth/images/auth-logo.svg"
 
 DEFAULT_THEME = "allianceauth.theme.flatly.auth_hooks.FlatlyThemeHook"
 DEFAULT_THEME_DARK = "allianceauth.theme.darkly.auth_hooks.DarklyThemeHook"  # Legacy AAv3 user.profile.night_mode=1
