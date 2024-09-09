@@ -35,8 +35,11 @@ Section Order:
 ### Security
 -->
 
+## \[2.1.0\] - 2024-09-09
+
 ### Changed
 
+- The minimum required AA version is now 4.3.0
 - Moved third party libs into their own directory
 - Use new CSS styling for the forum SVG icons
 
