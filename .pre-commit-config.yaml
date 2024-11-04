@@ -123,7 +123,7 @@ repos:
         description: Ensure that files end with a newline.
 
   - repo: https://github.com/eslint/eslint
-    rev: v9.12.0
+    rev: v9.14.0
     hooks:
       - id: eslint
         name: ESLint
@@ -134,7 +134,7 @@ repos:
 #          - globals@15.10.0  # https://github.com/sindresorhus/globals/releases/latest
 
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.9.0
+    rev: v16.10.0
     hooks:
       - id: stylelint
         name: Stylelint
@@ -181,7 +181,7 @@ repos:
         description: Check for compliance with the definitions in the EditorConfig file.
 
   - repo: https://github.com/adamchainz/django-upgrade
-    rev: 1.21.0
+    rev: 1.22.1
     hooks:
       - id: django-upgrade
         name: Django upgrade
@@ -190,7 +190,7 @@ repos:
           - --target-version=4.2  # Minimum supported Django version for AA. Update as needed.
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.17.0
+    rev: v3.19.0
     hooks:
       - id: pyupgrade
         name: PyUpgrade
@@ -227,7 +227,7 @@ repos:
         description: Check for black disable comments.
 
   - repo: https://github.com/psf/black
-    rev: 24.8.0
+    rev: 24.10.0
     hooks:
       - id: black
         name: Black
@@ -236,7 +236,7 @@ repos:
           - --target-version=py310  # Minimum required Python version for AA. Update as needed.
 
   - repo: https://github.com/asottile/blacken-docs
-    rev: 1.18.0
+    rev: 1.19.1
     hooks:
       - id: blacken-docs
         name: Blacken docs
@@ -247,7 +247,7 @@ repos:
           - --target-version=py310  # Minimum required Python version for AA. Update as needed.
 
   - repo: https://github.com/executablebooks/mdformat
-    rev: 0.7.17
+    rev: 0.7.18
     hooks:
       - id: mdformat
         name: Mdformat
@@ -271,7 +271,7 @@ repos:
         description: Format the tox.ini file.
 
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 2.2.4
+    rev: v2.5.0
     hooks:
       - id: pyproject-fmt
         name: pyproject.toml formatter
@@ -282,7 +282,7 @@ repos:
           - tox==4.21.2  # https://github.com/tox-dev/tox/releases/latest
 
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.20.2
+    rev: v0.22
     hooks:
       - id: validate-pyproject
         name: Validate pyproject.toml
@@ -298,7 +298,7 @@ repos:
           - --py-version=3.10  # Minimum required Python version for AA. Update as needed.
 
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.3
+    rev: 0.29.4
     hooks:
       - id: check-github-actions
         name: Check GitHub Actions
