@@ -6,6 +6,7 @@
 default_language_version:
   # force all unspecified python hooks to run python3
   python: python3
+  node: 22.4.1
 
 # https://pre-commit.ci/
 ci:
@@ -20,14 +21,6 @@ ci:
   skip:
     - eslint  # Fails due to missing node environment in CI
   submodules: false
-
-# Globally exclude files from all hooks
-exclude: |
-  (?x)(
-    LICENSE|  # License
-    .min(.css|.css.map|.js|.js.map)|  # Minified CSS and JS files
-    static/(.*)/libs/  # External libraries
-  )
 
 # pre-commit setup
 repos:
@@ -113,6 +106,12 @@ repos:
         description: Check for trailing whitespace.
         args:
           - --markdown-linebreak-ext=md
+        exclude: |
+          (?x)(
+            .min(.css|.css.map|.js|.js.map)|
+            locale/|
+            static/(.*)/libs/
+          )
 
       - id: check-executables-have-shebangs
         name: Check for shebangs in executables
@@ -121,6 +120,12 @@ repos:
       - id: end-of-file-fixer
         name: End of file fixer
         description: Ensure that files end with a newline.
+        exclude: |
+          (?x)(
+            .min(.css|.css.map|.js|.js.map)|
+            locale/|
+            static/(.*)/libs/
+          )
 
   - repo: https://github.com/eslint/eslint
     rev: v9.14.0
@@ -128,6 +133,12 @@ repos:
       - id: eslint
         name: ESLint
         description: Check for problems in JavaScript files.
+        language: node
+        exclude: |
+          (?x)(
+            .min(.js|.js.map)|
+            static/(.*)/libs/
+          )
 #        additional_dependencies:
 #          # eslint itself needs to be here when using additional_dependencies.
 #          - eslint@9.14.0  # https://github.com/eslint/eslint/releases/latest
@@ -139,6 +150,12 @@ repos:
       - id: stylelint
         name: Stylelint
         description: Check for problems in CSS files.
+        language: node
+        exclude: |
+          (?x)(
+            .min(.css|.css.map)|
+            static/(.*)/libs/
+          )
         args:
           - --formatter=compact
         additional_dependencies:
@@ -179,6 +196,12 @@ repos:
       - id: editorconfig-checker
         name: EditorConfig Checker
         description: Check for compliance with the definitions in the EditorConfig file.
+        exclude: |
+          (?x)(
+            LICENSE|
+            .min(.css|.css.map|.js|.js.map)|
+            static/(.*)/libs/
+          )
 
   - repo: https://github.com/adamchainz/django-upgrade
     rev: 1.22.1
