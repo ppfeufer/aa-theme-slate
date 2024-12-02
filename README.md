@@ -32,7 +32,7 @@ ______________________________________________________________________
 
 ## Installation<a name="installation"></a>
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **Alliance Auth Theme Slate >= 2.0.0 needs at least Alliance Auth v4.0.0!**
 >

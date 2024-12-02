@@ -22,7 +22,7 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] - Unreleased
+## [In Development] - Unreleased
 
 <!--
 Section Order:
@@ -35,7 +35,7 @@ Section Order:
 ### Security
 -->
 
-## \[2.1.0\] - 2024-09-09
+## [2.1.0] - 2024-09-09
 
 ### Changed
 
@@ -47,9 +47,9 @@ Section Order:
 
 - Support for Python 3.8 and Python 3.9
 
-## \[2.0.0\] - 2024-03-16
+## [2.0.0] - 2024-03-16
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0!**
 >
@@ -57,7 +57,7 @@ Section Order:
 > you install this version, otherwise, an update to Alliance Auth will
 > be pulled in unsupervised.
 
-> \[!IMPORTANT\]
+> [!IMPORTANT]
 >
 > Configuration change!
 >
@@ -102,9 +102,9 @@ if "aa_theme_slate" in INSTALLED_APPS:
     DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
 ```
 
-## \[2.0.0-beta.1\] - 2024-03-10
+## [2.0.0-beta.1] - 2024-03-10
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b2!**
 >
@@ -112,7 +112,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 > you install this version, otherwise, an update to Alliance Auth will
 > be pulled in unsupervised.
 
-> \[!IMPORTANT\]
+> [!IMPORTANT]
 >
 > Configuration change!
 >
@@ -157,9 +157,9 @@ if "aa_theme_slate" in INSTALLED_APPS:
     DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
 ```
 
-## \[1.7.1\] - 2023-09-18
+## [1.7.1] - 2023-09-18
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This is the last version compatible with Alliance Auth v3.**
 
@@ -167,7 +167,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 
 - Moved Bootstrap icon font to the right directory
 
-## \[1.7.0\] - 2023-09-02
+## [1.7.0] - 2023-09-02
 
 ### Changed
 
@@ -176,7 +176,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 - Minimum requirements
   - Alliance Auth >= 3.6.1
 
-## \[1.6.0\] - 2022-08-05
+## [1.6.0] - 2022-08-05
 
 ### Added
 
@@ -188,13 +188,13 @@ if "aa_theme_slate" in INSTALLED_APPS:
   - Alliance Auth >= 2.15.1
   - Python >= 3.8
 
-## \[1.5.0\] - 2022-08-05
+## [1.5.0] - 2022-08-05
 
 ### Changed
 
 - Updates for AA3
 
-## \[1.4.0\] - 2022-03-02
+## [1.4.0] - 2022-03-02
 
 ### Added
 
@@ -211,7 +211,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 
 - Deprecated settings
 
-## \[1.3.0\] - 2021-11-30
+## [1.3.0] - 2021-11-30
 
 ### Changed
 
@@ -219,43 +219,43 @@ if "aa_theme_slate" in INSTALLED_APPS:
   - Python >= 3.7
   - Alliance Auth >= 2.9.3
 
-## \[1.2.3\] - 2021-11-20
+## [1.2.3] - 2021-11-20
 
 ### Fixed
 
 - Django version in `setup.py`
 
-## \[1.2.2\] - 2021-11-20
+## [1.2.2] - 2021-11-20
 
 ### Fixed
 
 - Author in `setup.py`
 
-## \[1.2.1\] - 2021-10-21
+## [1.2.1] - 2021-10-21
 
 ### Changed
 
 - Use SITE_NAME as page title
 
-## \[1.2.0\] - 2021-10-17
+## [1.2.0] - 2021-10-17
 
 ### Changed
 
 - Compatibility for Alliance Auth 2.9.0
 
-## \[1.1.0\] - 2021-04-19
+## [1.1.0] - 2021-04-19
 
 ### Removed
 
 - CSS for dark and light mode, we don't have that with this theme
 
-## \[1.0.1\] - 2021-04-18
+## [1.0.1] - 2021-04-18
 
 ### Fixed
 
 - Some typos
 
-## \[1.0.0\] - 2021-04-18
+## [1.0.0] - 2021-04-18
 
 ### Added
 
