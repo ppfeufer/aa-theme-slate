@@ -39,6 +39,10 @@ Section Order:
 
 - Python 3.13 to the test matrix
 
+### Changed
+
+- Use `django-sri` for hash calculation
+
 ## [2.1.0] - 2024-09-09
 
 ### Changed
