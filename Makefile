@@ -1,7 +1,7 @@
 # Makefile for AA Theme Slate
 
 # Variables
-appname = sev3rance-auth-templates
+appname = aa-theme-slate
 appname_verbose = AA Theme Slate
 package = aa_theme_slate
 translation_directory = $(package)/locale
@@ -46,13 +46,13 @@ graph_models:
 # Prepare a new release
 # Update the graph of the models, translation files and the version in the package
 .PHONY: prepare-release
-prepare-release: graph_models pot
+prepare-release:
 	@echo ""
 	@echo "Preparing a release …"
 	@read -p "New Version Number: " new_version; \
 	sed -i "/__version__/c\__version__ = \"$$new_version\"" $(package)/__init__.py; \
-	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
-	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
+#	sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
+#	sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 #	subdircount=$$(find $(translation_directory) -mindepth 1 -maxdepth 1 -type d | wc -l); \
 #	if [[ $$subdircount -gt 1 ]]; then \
 #		for path in $(translation_directory)/*/; do \
