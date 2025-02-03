@@ -42,6 +42,8 @@ Section Order:
 ### Changed
 
 - Use `django-sri` for hash calculation
+- Minimum requirements
+  - Alliance Auth >= 4.6.0
 
 ## [2.1.0] - 2024-09-09
 
