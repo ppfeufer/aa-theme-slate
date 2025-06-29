@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Missing `.map` files for the CSS and JS files
+
 ## [2.2.0] - 2025-02-03
 
 ### Added
