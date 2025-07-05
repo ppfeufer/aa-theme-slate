@@ -39,6 +39,12 @@ Section Order:
 
 - Missing `.map` files for the CSS and JS files
 
+### Changed
+
+- Use the new static files manifest storage backend provided by Alliance Auth v4.8.0
+- Minimum requirements
+  - Alliance Auth >= 4.8.0
+
 ## [2.2.0] - 2025-02-03
 
 ### Added
