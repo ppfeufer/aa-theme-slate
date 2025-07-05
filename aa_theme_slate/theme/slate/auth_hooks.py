@@ -23,20 +23,19 @@ class AaSlateThemeHook(ThemeHook):
 
         css_static_files = [
             get_theme_hook_static(
-                static_file="theme/aav4/libs/bootswatch/v5.3.3/slate/css/bootstrap.min.css"
+                static_file="aa_theme_slate/theme/aav4/libs/bootswatch/v5.3.3/slate/css/bootstrap.min.css"
             ),
             get_theme_hook_static(
-                static_file="theme/aav4/css/community-apps.min.css",
-                with_version=True,
+                static_file="aa_theme_slate/theme/aav4/css/community-apps.min.css"
             ),
         ]
 
         js_static_files = [
             get_theme_hook_static(
-                static_file="theme/aav4/libs/popper/v2.11.8/popper.min.js"
+                static_file="aa_theme_slate/theme/aav4/libs/popper/v2.11.8/popper.min.js"
             ),
             get_theme_hook_static(
-                static_file="theme/aav4/libs/bootswatch/v5.3.3/slate/javascript/bootstrap.min.js"
+                static_file="aa_theme_slate/theme/aav4/libs/bootswatch/v5.3.3/slate/javascript/bootstrap.min.js"
             ),
         ]
 

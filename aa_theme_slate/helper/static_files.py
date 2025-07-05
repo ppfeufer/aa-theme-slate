@@ -5,13 +5,13 @@ Helper functions for static integrity calculations
 # Standard Library
 import os
 from pathlib import Path
-from urllib.parse import urljoin
 
 # Third Party
 from sri import Algorithm, calculate_integrity
 
 # Django
 from django.conf import settings
+from django.templatetags.static import static
 
 # Alliance Auth
 from allianceauth.services.hooks import get_extension_logger
@@ -20,25 +20,27 @@ from allianceauth.services.hooks import get_extension_logger
 from app_utils.logging import LoggerAddTag
 
 # AA Theme Slate
-from aa_theme_slate import __title__, __version__
-from aa_theme_slate.constants import SLATE_STATIC_DIR
+from aa_theme_slate import __title__
 
 logger = LoggerAddTag(my_logger=get_extension_logger(__name__), prefix=__title__)
 
 
-def calculate_integrity_hash(relative_file_path: str) -> str:
+def calculate_integrity_hash(static_file_path: str) -> str:
     """
     Calculates the integrity hash for a given static file
 
     :param self:
     :type self:
-    :param relative_file_path: The file path relative to the `aa_theme_slate/static/aa_theme_slate` folder
-    :type relative_file_path: str
+    :param static_file_path: The file path relative to the `aa_theme_slate/static/aa_theme_slate` folder
+    :type static_file_path: str
     :return: The integrity hash
     :rtype: str
     """
 
-    file_path = os.path.join(SLATE_STATIC_DIR, relative_file_path)
+    file_path = os.path.join(
+        settings.STATIC_ROOT, static_file_path.replace("/static/", "")
+    )
+
     integrity_hash = calculate_integrity(
         path=Path(file_path), algorithm=Algorithm.SHA512
     )
@@ -46,9 +48,7 @@ def calculate_integrity_hash(relative_file_path: str) -> str:
     return integrity_hash
 
 
-def get_theme_hook_static(
-    static_file: str, script_type: str = None, with_version: bool = False
-) -> dict:
+def get_theme_hook_static(static_file: str, script_type: str = None) -> dict:
     """
     Get the static file details for a theme hook
 
@@ -62,24 +62,17 @@ def get_theme_hook_static(
     :rtype: dict
     """
 
-    return_value = {
-        "url": urljoin(
-            base=settings.STATIC_URL,
-            url=f"aa_theme_slate/{static_file}",
-        ),
-    }
+    static_file_path = static(static_file)
+
+    return_value = {"url": static_file_path}
 
     # Calculate integrity hash if not in debug mode
     if not settings.DEBUG:
-        integrity = calculate_integrity_hash(relative_file_path=static_file)
+        integrity = calculate_integrity_hash(static_file_path=static_file_path)
         return_value["integrity"] = integrity
 
     # Add the script type if provided
     if script_type:
         return_value["js_type"] = script_type
-
-    # Add the version number if requested
-    if with_version:
-        return_value["url"] += f"?v={__version__}"
 
     return return_value
