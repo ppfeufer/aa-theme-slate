@@ -42,6 +42,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.4.0] - 2025-09-22
+
 ### Changed
 
 - Moved asset loading into a template instead of an `auth_hook`. This allows to load the assets only on pages where they are needed.
@@ -318,6 +320,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 [2.1.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.0.0...v2.1.0 "v2.1.0"
 [2.2.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.1.0...v2.2.0 "v2.2.0"
 [2.3.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.2.0...v2.3.0 "v2.3.0"
-[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...HEAD "In Development"
+[2.4.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...v2.4.0 "v2.4.0"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
