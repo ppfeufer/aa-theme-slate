@@ -41,17 +41,6 @@ class SlateThemeHookTests(TestCase):
             second="Slate Bootstrap Theme for Alliance Auth",
         )
 
-    def test_should_have_correct_number_of_css_and_js_files(self):
-        """
-        Test should have the correct number of css and js files
-
-        :return:
-        :rtype:
-        """
-
-        self.assertEqual(first=len(self.theme_hook.css), second=2)
-        self.assertEqual(first=len(self.theme_hook.js), second=2)
-
     def test_should_have_correct_header_padding(self):
         """
         Test should have correct header padding
