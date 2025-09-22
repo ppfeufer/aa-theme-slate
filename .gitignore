@@ -13,3 +13,6 @@ node_modules
 __pycache__
 .coverage
 /coverage.xml
+
+.esi-compatibility-date
+.make/myauth-path

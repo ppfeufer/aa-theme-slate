@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog] and this project adheres to [Semantic Versioning].
 
 <!--
 GitHub MD Syntax:
@@ -15,11 +14,17 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
 
+> [!TIP]
+> Optional information to help a user be more successful.
+
 > [!IMPORTANT]
 > Crucial information necessary for users to succeed.
 
 > [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advised about risks or negative outcomes of certain actions.
 -->
 
 ## [In Development] - Unreleased
@@ -34,6 +39,8 @@ Section Order:
 ### Removed
 ### Security
 -->
+
+<!-- Your changes go here -->
 
 ## [2.3.0] - 2025-07-05
 
@@ -284,3 +291,27 @@ if "aa_theme_slate" in INSTALLED_APPS:
 ### Added
 
 - initial release
+
+<!-- Links to be updated upon release -->
+
+[1.0.0]: https://github.com/ppfeufer/aa-theme-slate/commits/v1.0.0 "v1.0.0"
+[1.0.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.0.0...v1.0.1 "v1.0.1"
+[1.1.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.0.1...v1.1.0 "v1.1.0"
+[1.2.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.1.0...v1.2.0 "v1.2.0"
+[1.2.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.2.0...v1.2.1 "v1.2.1"
+[1.2.2]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.2.1...v1.2.2 "v1.2.2"
+[1.2.3]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.2.2...v1.2.3 "v1.2.3"
+[1.3.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.2.3...v1.3.0 "v1.3.0"
+[1.4.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.3.0...v1.4.0 "v1.4.0"
+[1.5.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.4.0...v1.5.0 "v1.5.0"
+[1.6.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.5.0...v1.6.0 "v1.6.0"
+[1.7.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.6.0...v1.7.0 "v1.7.0"
+[1.7.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.7.0...v1.7.1 "v1.7.1"
+[2.0.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.7.1...v2.0.0 "v2.0.0"
+[2.0.0-beta.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v1.7.1...v2.0.0-beta.1 "v2.0.0-beta.1"
+[2.1.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.0.0...v2.1.0 "v2.1.0"
+[2.2.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.1.0...v2.2.0 "v2.2.0"
+[2.3.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.2.0...v2.3.0 "v2.3.0"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...HEAD "In Development"
+[keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
+[semantic versioning]: http://semver.org/ "Semantic Versioning"
