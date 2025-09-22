@@ -42,6 +42,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Moved asset loading into a template instead of an `auth_hook`. This allows to load the assets only on pages where they are needed.
+- Minimum requirements
+  - Alliance Auth >= 4.10.0
+
 ## [2.3.0] - 2025-07-05
 
 ### Added
