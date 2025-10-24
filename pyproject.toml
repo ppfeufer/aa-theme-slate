@@ -47,10 +47,11 @@ optional-dependencies.tests-allianceauth-latest = [
     "django-webtest",
 ]
 urls.Changelog = "https://github.com/ppfeufer/aa-theme-slate/blob/master/CHANGELOG.md"
+urls.Codecov = "https://codecov.io/gh/ppfeufer/aa-theme-slate"
+urls.Discord = "https://discord.gg/fjnHAmk"
 urls.Documentation = "https://github.com/ppfeufer/aa-theme-slate/blob/master/README.md"
-urls.Donations = "https://ko-fi.com/ppfeufer"
-urls.Homepage = "https://github.com/ppfeufer/aa-theme-slate"
-urls.Source = "https://github.com/ppfeufer/aa-theme-slate.git"
+urls.Donation = "https://ko-fi.com/ppfeufer"
+urls.GitHub = "https://github.com/ppfeufer/aa-theme-slate"
 urls.Tracker = "https://github.com/ppfeufer/aa-theme-slate/issues"
 
 [tool.hatch.build]
