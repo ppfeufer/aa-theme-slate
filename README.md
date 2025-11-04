@@ -43,7 +43,7 @@ ______________________________________________________________________
 > The last version of Alliance Auth Theme Slate that supports Alliance Auth v3 is `1.7.1`.
 
 ```shell
-pip install aa-theme-slate==2.4.0
+pip install aa-theme-slate==2.4.1
 ```
 
 Now open your `local.py` and add the following right below your `INSTALLED_APPS`:

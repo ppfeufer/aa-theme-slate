@@ -42,6 +42,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [2.4.1] - 2025-11-04
+
+### Changed
+
+- Some project internal updates and changes
+
 ## [2.4.0] - 2025-09-22
 
 ### Changed
@@ -321,6 +327,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 [2.2.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.1.0...v2.2.0 "v2.2.0"
 [2.3.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.2.0...v2.3.0 "v2.3.0"
 [2.4.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...v2.4.0 "v2.4.0"
-[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.0...HEAD "In Development"
+[2.4.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.0...v2.4.1 "v2.4.1"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
