@@ -70,7 +70,7 @@ graph-models: check-python-venv check-myauth-path
 # Prepare a new release
 # Update the graph of the models, translation files and the version in the package
 .PHONY: prepare-release
-prepare-release: pot graph-models
+prepare-release:
 	@echo "Preparing a release …"
 	@read -p "New Version Number: " new_version; \
 	if ! grep -qE "^## \[$$new_version\]" CHANGELOG.md; then \
@@ -89,15 +89,11 @@ prepare-release: pot graph-models
 		git restore $(translation_directory)/django.pot; \
 	elif [[ $$new_version =~ rc ]]; then \
 		echo "$(TEXT_COLOR_YELLOW)$(TEXT_BOLD)Release Candidate$(TEXT_RESET) version detected!"; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 	else \
 		echo "$(TEXT_BOLD)Release$(TEXT_BOLD_END) version detected."; \
 		sed -i -E "/$(appname)==/s/==.*/==$$new_version/" README.md; \
 		sed -i -E "\|\[in development\]\: |s|\]\: .*|\]\: $(git_repository)/compare/v$$new_version...HEAD \"In Development\"|g" CHANGELOG.md; \
 		echo "Updated version in $(TEXT_BOLD)README.md$(TEXT_BOLD_END)"; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 	fi;
 
 # Help
