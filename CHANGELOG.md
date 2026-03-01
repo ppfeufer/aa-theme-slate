@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Removed
+
+- Unused dependency
+
 ## [2.4.1] - 2025-11-04
 
 ### Changed
