@@ -45,6 +45,7 @@ Section Order:
 
 ### Removed
 
+- Support for AAv3 and Bootstrap 3 template fallback
 - Unused dependency
 
 ## [2.4.1] - 2025-11-04
