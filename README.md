@@ -73,20 +73,4 @@ if "aa_theme_slate" in INSTALLED_APPS:
 
     # Set Slate Bootstrap Theme for Alliance Auth as the default theme (optional)
     DEFAULT_THEME = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"
-    DEFAULT_THEME_DARK = "aa_theme_slate.theme.slate.auth_hooks.AaSlateThemeHook"  # Legacy AAv3 user.profile.night_mode=1
-```
-
-**Important**
-
-If you are using `AA-GDPR`, the template stuff needs to be **after** the `AA_GDPR`
-entry, like this:
-
-```python
-# GDPR Compliance
-INSTALLED_APPS.insert(0, "aagdpr")
-AVOID_CDN = True
-
-
-# Slate Thame - https://github.com/ppfeufer/aa-theme-slate
-INSTALLED_APPS.insert(0, "aa_theme_slate")
 ```
