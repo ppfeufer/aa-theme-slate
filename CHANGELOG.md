@@ -43,10 +43,16 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.0.0] - 2026-05-06
+
 ### Removed
 
 - Support for AAv3 and Bootstrap 3 template fallback
 - Unused dependency
+
+### Miscellaneous
+
+- Ready for Alliance Auth v5
 
 ## [2.4.1] - 2025-11-04
 
@@ -334,6 +340,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 [2.3.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.2.0...v2.3.0 "v2.3.0"
 [2.4.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...v2.4.0 "v2.4.0"
 [2.4.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.0...v2.4.1 "v2.4.1"
-[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.1...HEAD "In Development"
+[3.0.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.1...v3.0.0 "v3.0.0"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v3.0.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
