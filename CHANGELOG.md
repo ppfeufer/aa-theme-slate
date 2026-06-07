@@ -43,6 +43,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [4.0.0] - 2026-06-07
+
 > [!IMPORTANT]
 >
 > **This version needs Alliance Auth v5!**
@@ -352,6 +354,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 [2.4.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.3.0...v2.4.0 "v2.4.0"
 [2.4.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.0...v2.4.1 "v2.4.1"
 [3.0.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v2.4.1...v3.0.0 "v3.0.0"
-[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v3.0.0...HEAD "In Development"
+[4.0.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v3.0.0...v4.0.0 "v4.0.0"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.0.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
