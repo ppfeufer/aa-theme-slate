@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Change
+
+- CSS modernized
+
 ## [4.0.1] - 2026-07-07
 
 ### Added
