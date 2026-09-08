@@ -16,3 +16,4 @@ __pycache__
 
 .esi-compatibility-date
 .make/myauth-path
+/.make/config-overrides.ini
