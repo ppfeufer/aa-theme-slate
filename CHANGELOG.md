@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Change
+
+- Bootstrap updated to v5.3.8
+
 ## [4.0.2] - 2026-08-04
 
 ### Change
