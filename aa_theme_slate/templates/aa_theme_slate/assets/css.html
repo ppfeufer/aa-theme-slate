@@ -1,12 +1,12 @@
 {% load aa_theme_slate sri %}
 
 <!-- Slate Theme CSS -->
-{% sri_static "aa_theme_slate/theme/bootstrap5/libs/bootswatch/v5.3.3/slate/css/bootstrap.min.css" %}
+{% sri_static "aa_theme_slate/libs/bootswatch/5.3.8/slate/bootstrap.min.css" %}
 
 {% if request.path %}
     {% if request.path|startswith:"/forum/" %}
         <!-- AA Forum related CSS -->
-        {% sri_static "aa_theme_slate/theme/bootstrap5/css/community-app-fixes/aa-forum.min.css" %}
+        {% sri_static "aa_theme_slate/css/community-app-fixes/aa-forum.min.css" %}
         <!-- AA Forum related CSS Ends -->
     {% endif %}
 {% endif %}
