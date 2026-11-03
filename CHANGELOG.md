@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [4.1.0] - 2026-11-03
+
 ### Change
 
 - Bootstrap updated to v5.3.8
@@ -378,6 +380,7 @@ if "aa_theme_slate" in INSTALLED_APPS:
 [4.0.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v3.0.0...v4.0.0 "v4.0.0"
 [4.0.1]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.0.0...v4.0.1 "v4.0.1"
 [4.0.2]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.0.1...v4.0.2 "v4.0.2"
-[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.0.2...HEAD "In Development"
+[4.1.0]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.0.2...v4.1.0 "v4.1.0"
+[in development]: https://github.com/ppfeufer/aa-theme-slate/compare/v4.1.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
